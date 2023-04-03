@@ -7,15 +7,40 @@ const wrapper=document.querySelector(".wrapper"),
       hintBtn=document.querySelector(".showhint"),
       hintElement=document.querySelector(".hint"),
       typeInput=document.querySelector(".type-input");
+      overlay=document.querySelector(".overlay");
+    /*  endGameBox=document.querySelector(".endgame-box");*/
 
 // Initializing game variables
 let word, incorrectLetters=[], correctLetters=[], maxGuesses;
 
+// Endgame overlay and endgame box
+function endGame(tmpTitle, tmpSubtitle){
+    while(overlay.firstChild){
+        overlay.removeChild(overlay.firstChild);
+    }
+    overlay.style.display="flex";
+    const endGameBox=document.createElement("div");
+    const title=document.createElement("h1");
+    const subtitle=document.createElement("h4");
+    const newGameButton=document.createElement("div");
+    title.innerText=tmpTitle;
+    subtitle.innerText=tmpSubtitle;
+    endGameBox.classList.add("endgame-box");
+    newGameButton.classList.add("newgame-button");
+    newGameButton.innerText="New Game";
+    endGameBox.appendChild(title);
+    endGameBox.appendChild(subtitle);
+    endGameBox.appendChild(newGameButton);
+    newGameButton.addEventListener("click", startNewGame);
+    overlay.appendChild(endGameBox);
+    
+}
 // Select random word from word list and set up game
 function startNewGame(){
-    alert("New Game Started! Guess New Word :)");
+   /* alert("New Game Started! Guess New Word :)"); */
 
     //Hide hint element
+    overlay.style.display="none";
     hintElement.style.display="none";
     hintElement.style.opacity="0";
 
@@ -49,7 +74,7 @@ function handleInput(e){
     // Ignore non-letters input and letters that have already guessed
     const key=e.target.value.toLowerCase();
   //  if(key.match(/^[a-z]+$/i) && !incorrectLetters.includes(` & {key}`) && !correctLetters.includes(` {key}`)){
-    if(key.match(/^[a-z]+$/i) && !incorrectLetters.includes(`${key}`) && !correctLetters.includes(`${key}`)){
+    if(key.match(/^[a-z]+$/i) && !incorrectLetters.includes(` ${key}`.toUpperCase()) && !correctLetters.includes(`${key}`)){
         if(word.includes(key)){
 
             // Update correct guess
@@ -66,7 +91,7 @@ function handleInput(e){
 
             // Update incorrect guess
             maxGuesses--;
-            incorrectLetters.push(`${key}`);
+            incorrectLetters.push(` ${key}`.toUpperCase());
             mistakes.innerText=incorrectLetters;
         }
     }
@@ -80,20 +105,23 @@ function handleInput(e){
            inputs.querySelectorAll("input")[i].value=word[i];
         }
 
-        setTimeout(() => {alert(`Congrats! You found the word ${word.toUpperCase()}`); startNewGame();}, 1);
-
-        
-
-       /* startNewGame();*/
+      /*  setTimeout(() => {alert(`Congrats! You found the word ${word.toUpperCase()}`); startNewGame();}, 100);*/
+      endGame("Hai indovinato!", `La parola era: ${word.toUpperCase()}`);
     }
+
     else if(maxGuesses<1){
-        alert("Game Over! Yoi don't have remaining guesses!");
+       /* alert("Game Over! You don't have remaining guesses!");*/
         for(let i=0; i<word.length; i++){
             
             // Fill inputs with correct letters
             inputs.querySelectorAll("input")[i].value=word[i];
         }
+        
+        endGame("Game Over!", `Non hai indovinato la parola: ${word.toUpperCase()}`);
+        
     }
+
+    
 
     // Clear input field
     typeInput.value= "";

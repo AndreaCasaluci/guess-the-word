@@ -5,26 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css">
     <title>Guess the Word!</title>
 </head>
 <body>
-    <div class="wrapper">
-        <h1>Guess the Word Game</h1>
-        <div class="content">
-            <input type="text" class="type-input" maxlength="1">
-            <div class="word"></div>
-            <div class="info">
-                <p class="guess">Guesses: <span></span></p>
-                <p class="wrong">Mistakes: <span></span></p>
-                <p class="hint">Hint: <span></span></p>
-            </div>
-            <div class="buttons">
-                <button class="reset">Reset Game</button>
-                <button class="showhint">Show Hint</button>
-            </div>
+    <div class="bodywrap">
+            <div class="wrapper">
+                <h1>Guess the Word Game&nbsp;<span class="flag fi fi-it"></span></h1>
+                
+                <div class="content">
+                    <input type="text" class="type-input" maxlength="1">
+                    <div class="word"></div>
+                    <div class="info">
+                        <p class="guess">Tentativi: <span></span></p>
+                        <p class="wrong">Errori: <span></span></p>
+                        <p class="hint">Suggerimento: <span></span></p>
+                    </div>
+                    <div class="buttons">
+                        <button class="reset">Riavvia Gioco</button>
+                        <button class="showhint">Mostra Suggerimento</button>
+                    </div>
+                </div>
         </div>
     </div>
+    <div class="overlay"></div>
     <script src="word-db-en.js"></script>
+    <script src="word-db-it.js"></script>
     <script src="index.js"></script>
 </body>
+
 </html>

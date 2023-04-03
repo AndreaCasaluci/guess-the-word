@@ -11,18 +11,30 @@ body{
     min-height: 100hv;
     display: flex;
     justify-content: center;
+   /* padding-top: 15%; 
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;*/
+    background-color: #1565c0;
+}
+.bodywrap{
+    min-height: 100hv;
+    display: flex;
+    justify-content: center;
     padding-top: 15%; 
    /* align-items: center;
     justify-content: center;
     padding: 0 10px;*/
     background-color: #1565c0;
 }
-
 .wrapper{
     width: 400px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba((0), 0, 0, 0.1);
+}
+.flag{
+    
 }
 
 .wrapper h1{
@@ -100,6 +112,52 @@ body{
 
 .content .buttons .reset:hover, .content .buttons .showhint:hover{
     background-color: #1e88e5;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: #00000096;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+
+}
+
+.endgame-box{
+    opacity: 0;
+    text-align: center;
+    position: absolute;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    height: fit-content;
+    padding:20px;
+    background-color: #1565c0;
+    color: #fff;
+    font-weight: 500;
+    border:2px solid #ccc;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 2s;
+}
+
+.newgame-button{
+    width: fit-content;
+    padding: 5px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 400;
+    background-color: #55ca27;
+    border-radius: 4px;
+}
+
+.newgame-button:hover{
+    background-color: #3ea118;
 }
 
 @media screen and (max-width: 450px) {
