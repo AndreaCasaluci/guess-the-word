@@ -131,4 +131,102 @@ const wordListIt = [
         word: "pioggia",
         hint: "C'è quando vi è brutto tempo"
     },
+    {
+        word: "cuffie",
+        hint: "Si usano per ascoltare la musica"
+    },
+    {
+        word: "burro",
+        hint: "Spesso usato nella preparazione di dolci"
+    },
+    {
+        word: "pattini",
+        hint: "Possono essere a rotelle"
+    },
+    {
+        word: "margherita",
+        hint: "Può essere sia un fiore sia una pizza"
+    },
+    {
+        word: "foto",
+        hint: "Cattura un momento"
+    },
+    {
+        word: "cammello",
+        hint: "Si aggira nel deserto"
+    },
+    {
+        word: "germania",
+        hint: "Ha come capitale Berlino"
+    },
+    {
+        word: "pinguino",
+        hint: "Vive in posti molto freddi"
+    },
+    {
+        word: "sveglia",
+        hint: "La odi il lunedì mattina"
+    },
+    {
+        word: "antenna",
+        hint: "Si usa per captare i segnali"
+    },
+    {
+        word: "dollaro",
+        hint: "Valuta americana"
+    },
+    {
+        word: "insegnare",
+        hint: "Lo fa il professore"
+    },
+    {
+        word: "stivali",
+        hint: "Un tipo di calzatura"
+    },
+    {
+        word: "perle",
+        hint: "Si usano per creare delle collane"
+    },
+    {
+        word: "carota",
+        hint: "Ortaggio arancione"
+    },
+    {
+        word: "tacchino",
+        hint: "Simile al pollo"
+    },
+    {
+        word: "armatura",
+        hint: "La indossa il cavaliere"
+    },
+    {
+        word: "rifiutare",
+        hint: "Dire di no"
+    },
+    {
+        word: "fratello",
+        hint: "Il figlio di mia madre"
+    },
+    {
+        word: "libro",
+        hint: "Può essere un fantasy, un giallo, o molti altri generi"
+    },
+    {
+        word: "mesi",
+        hint: "Compongono l'anno"
+    },
+    {
+        word: "forbici",
+        hint: "Possono essere dalla punta arrotondata"
+    },
+    {
+        word: "fiume",
+        hint: "Lo è il Tevere"
+    },
+    {
+        word: "interprete",
+        hint: "Colui che traduce"
+    },
+    
+
 ]
